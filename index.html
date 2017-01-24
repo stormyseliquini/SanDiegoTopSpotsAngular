@@ -5,12 +5,22 @@
 <head>
     <meta charset="UTF-8">
     <title>San Diego Top Spots</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
-    <link rel="stylesheet" href="styles.css">
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/angular-toastr/dist/angular-toastr.css" />
+    <!-- endbower -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="/app/styles/styles.css">
+    <!-- endinject -->
 </head>
 <!-- add  ng-controller and reference the name of the controller you defined in index.js -->
 
-<body ng-controller="mainController">
+<body ng-controller="TopSpotsController as vm">
+    <!-- bower:js -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular-toastr/dist/angular-toastr.tpls.js"></script>
+    <!-- endbower -->
     <center id="title">San Diego Top Spots</center>
     <table id="table">
         <thead>
@@ -20,7 +30,7 @@
                     <th>DESCRIPTION</th>
                     <th>LOCATION</th>
                 </tr>
-                <tr ng-repeat='value in topspots'>
+                <tr ng-repeat='value in vm.topspots'>
                     <td>{{value.name}}</td>
                     <td>{{value.description}}</td>
                     <td>
@@ -59,7 +69,11 @@
             </div>
         </div>
         <div ng-model="map"></div>
-        <script src="index.js"></script>
+        <!-- inject:js -->
+        <script src="/app/app.js"></script>
+        <script src="/app/topspots.controller.js"></script>
+        <script src="/app/topspots.factory.js"></script>
+        <!-- endinject -->
 </body>
 
 </html>
