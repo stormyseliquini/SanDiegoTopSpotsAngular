@@ -36,5 +36,14 @@
                 }
             )
         }
+        vm.addRow = function() {
+            vm.topspots.push({ 'name': vm.name, 'description': vm.description, 'location': [vm.locationLAT, vm.locationLONG] });
+            vm.name = '';
+            vm.description = '';
+            vm.locationLAT = '';
+            vm.locationLONG = '';
+        };
     }
+
 })();
+// reviewed by vs and gb

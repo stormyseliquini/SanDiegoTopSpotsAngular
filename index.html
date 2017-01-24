@@ -43,29 +43,29 @@
     <div>
         <label>Name</label>
         <div>
-            <input type="text" name="name" ng-model="name" />
+            <input type="text" name="name" ng-model="vm.name" />
         </div>
     </div>
     <div>
         <label>description</label>
         <div>
-            <input type="text" name="description" ng-model="description" />
+            <input type="text" name="description" ng-model="vm.description" />
         </div>
     </div>
     <div>
         <label>location(latitude)</label>
         <div>
-            <input type="number" name="locationLAT" ng-model="locationLAT" />
+            <input type="number" name="locationLAT" ng-model="vm.locationLAT" />
         </div>
     </div>
     <div>
         <label>location(longitude)</label>
         <div>
-            <input type="number" name="locationLONG" ng-model="locationLONG" />
+            <input type="number" name="locationLONG" ng-model="vm.locationLONG" />
         </div>
         <div>
             <div style="padding-left:110px">
-                <input type="submit" value="Submit" ng-click="addRow()" />
+                <input type="submit" value="Submit" ng-click="vm.addRow()" />
             </div>
         </div>
         <div ng-model="map"></div>
@@ -77,3 +77,4 @@
 </body>
 
 </html>
+<!-- reviewed by vs and gb -->

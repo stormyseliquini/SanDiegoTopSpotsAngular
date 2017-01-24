@@ -30,3 +30,4 @@
 //         $scope.locationLONG = '';
 //     };
 // }])
+// reviewed by vs and gb
